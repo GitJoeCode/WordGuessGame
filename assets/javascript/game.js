@@ -89,7 +89,18 @@ var songs = {
     newOptions();
     newGuesses();
     newAttempts();
-    reset();
+    var display = "<h1>The Leonardo DiCaprio Hangman Game</h1>" +
+    "<p>Press any key to begin Playing!</p>" +
+    "<p>Wins " + wins + "</p>" +
+    "<p>Losses " + losses + "</p>" +
+    "<p>Current Word</p>" +
+    "<p>" + answer.join(' ') + "</p>" +
+    "<p>Number of Guesses Remaining</p>" + 
+    "<p>" + attempts + "</p>" +
+    "<p>Your Guesses so far</p>" + 
+    "<p>" + guesses + "</p>";
+
+    document.querySelector('#game').innerHTML = display;
 
     document.onkeyup = function() {
     var userGuess = String.fromCharCode(event.keyCode).
