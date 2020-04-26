@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Hangman Game</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
@@ -19,11 +22,25 @@
             <p>Your Guesses so far</p> -->
 
         </div>
-
+        
         <script src = "assets/javascript/game.js">
 
         </script>
         
+        
+        <div id="wrapper">
+            <div id='player'>
+                <audio id="music_player">
+                <source src="assets/JamesHorner/Titanic/14 My Heart Will Go On.mp3"/>
+                </audio>
+                <input type="image" src="" onclick="play_aud()" id="play_button">
+                <input type="image" src="" onclick="pause_aud()" id="play_button">
+                <input type="image" src="" onclick="stop_aud()" id="play_button">
+                <img src="" id="vol_img">
+                <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+            </div>
+        </div>
+
     </body>
   
 </html>

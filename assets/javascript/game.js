@@ -48,7 +48,8 @@ var newAttempts = function() {
 
 var newAnswer = function() {
     this.answer = [];
-}
+};
+
 
 var songs = {
     onceUponATimeInHollywood: "sixties",
@@ -123,6 +124,7 @@ var songs = {
                         }
                         else {
                             wins ++;
+                            play_aud(); //automatically plays song when puzzle is solved
                             reset();
                             break;
                         }
@@ -161,4 +163,40 @@ var songs = {
     "<p>" + guesses + "</p>";
 
     document.querySelector('#game').innerHTML = display;
+    }
+    
+    
+    document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
+    var player;
+    
+    // spent time finding youtube videos of every song I wanted
+    // to play when the corresponding puzzle was solved but could 
+    // not setup a link for youtube audio to be played and iframe 
+    // didn't work wouldn't allow playback of videos not on youtube
+    // found some examples of media players online just was playing
+    // around with one and trying to add at least 1 song for when
+    // puzzle was solved
+
+    function startplayer() 
+    {
+     player = document.getElementById('music_player');
+     player.controls = false;
+    }
+    
+    function play_aud() 
+    {
+     player.play();
+    } 
+    function pause_aud() 
+    {
+     player.pause();
+    }
+    function stop_aud() 
+    {
+     player.pause();
+     player.currentTime = 0;
+    }
+    function change_vol()
+    {
+     player.volume=document.getElementById("change_vol").value;
     }

@@ -1,0 +1,43 @@
+body {
+    width:100%;
+    margin:0 auto;
+    padding:0px;
+    font-family:'Cinzel', serif;
+    
+    background-image: url("https://www.denofgeek.com/wp-content/uploads/2013/12/leonardo-dicaprio-01.jpg?fit=2560%2C1600") ;
+}
+
+#game {
+    margin:auto;
+    left: 200px;
+}   
+
+
+/* #wrapper {
+    text-align:center;
+    margin:0 auto;
+    padding:0px;
+    width:500px;
+    z-index: 50;
+}
+
+#player {
+    background-color:#084B8A;
+    width:400px;
+    margin-left:50px;
+    padding:5px;
+    box-sizing:border-box;
+    z-index: 50;
+}
+
+input[type="image"] {
+    float:left;
+    height:20px;
+    margin-left:2px;
+    margin-right:5px;
+    margin-top:2px;
+}
+
+#vol_img {
+    width:20px;
+} */
